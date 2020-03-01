@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view ('user.cart');
+        return view ('user.product');
     }
 
     /**
