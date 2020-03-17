@@ -15,10 +15,12 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/cart', 'CartController@index')->name('cart');
 
-Route::get('/checkout', 'CheckoutController@index')->name('checkout');
+Route::get('/contact', 'ContactController@index')->name('contact');
 
-Route::get('/product', 'ProductController@index')->name('product');
+Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 
 Route::get('/shop', 'ShopController@index')->name('shop');
 
-Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/{category}', 'ShopController@category')->name('category');
+
+

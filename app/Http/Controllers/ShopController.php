@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\BatteryType;
+use App\Category;
+use App\Brand;
+use App\GearBox;
+use App\Product;
+use App\Volts;
+use App\Weight;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -13,8 +20,52 @@ class ShopController extends Controller
      */
     public function index()
     {
-        return view ('user.shop');
+        $products = Product::paginate(12);
+        $category = Category::get();
+        $brands = Brand::get();
+        $battery = BatteryType::get();
+        $gearBox = GearBox::get();
+        $volts = Volts::get();
+        $weight = Weight::get();
+        return view(
+            'user.shop',
+            compact(
+                'products',
+                'brands',
+                'category',
+                'battery',
+                'gearBox',
+                'volts',
+                'weight'
+            )
+        );
     }
+
+    public function category($code)
+    {
+        $category = Category::where('code', $code)->first();
+        $products = Product::where('category_id', $category)->get();
+        $brands = Brand::get();
+        $battery = BatteryType::get();
+        $gearBox = GearBox::get();
+        $volts = Volts::get();
+        $weight = Weight::get();
+        return view(
+            'user.category',
+            compact(
+                'products',
+                'brands',
+                'category',
+                'battery',
+                'gearBox',
+                'volts',
+                'weight'
+            )
+        );
+    }
+
+
+
 
     /**
      * Show the form for creating a new resource.

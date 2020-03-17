@@ -11,6 +11,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call([
+            BatteryTypeTableSeeder::class,
+            BrandTableSeeder::class,
+            CategoryTableSeeder::class,
+            CommentTableSeeder::class,
+            GearBoxTableSeeder::class,
+            ProductTableSeeder::class,
+            VoltsTableSeeder::class,
+            WeightTableSeeder::class,
+        ]);
     }
 }

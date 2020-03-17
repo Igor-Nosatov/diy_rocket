@@ -15,43 +15,53 @@ class CategoryTableSeeder extends Seeder
         DB::table('categories')->insert([
             [
                 'name' => 'Drills',
+                'code' => 'drills',
                 'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Sanders & Planers',
+                'code' => 'sanders-planers',
                 'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Jigsaws & Power Saws',
-                'image' => 'image/categories/3.jpg',
+                'code' => 'jigsaw-powersaws',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Electric Screwdrivers',
-                'image' => 'image/categories/4.jpg',
+                'code' => 'electric-screwdrivers',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Grinders',
-                'image' => 'image/categories/5.jpg',
+                'code' => 'grinders',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Heat Guns',
-                'image' => 'image/categories/6.jpg',
+                'code' => 'heat-guns',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Powered Multi-Tools',
-                'image' => 'image/categories/7.jpg',
+                'code' => 'powered-multitools',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Glue Guns',
-                'image' => 'image/categories/8.jpg',
+                'code' => 'glue-guns',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Spray Guns',
-                'image' => 'image/categories/9.jpg',
+                'code' => 'spray-guns',
+                'image' => 'image/categories/1.jpg',
             ],
             [
                 'name' => 'Staplers & Nailers',
-                'image' => 'image/categories/10.jpg',
+                'code' => 'staplers-nailers',
+                'image' => 'image/categories/1.jpg',
             ],
         ]);
     }

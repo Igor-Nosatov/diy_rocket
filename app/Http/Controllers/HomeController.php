@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view ('user.index');
+        $products = Product::get()->random(6);
+        $categories = Category::get()->random(8);
+        return view ('user.index', compact('products','categories'));
     }
 
     /**
