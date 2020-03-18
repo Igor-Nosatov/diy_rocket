@@ -28,4 +28,24 @@ class Product extends Model
     {
         return $this->belongsTo(Brand::class);
     }
+
+    public function battery_type()
+    {
+        return $this->belongsTo(BatteryType::class);
+    }
+
+    public function gear_box()
+    {
+        return $this->belongsTo(GearBox::class);
+    }
+
+    public function volt()
+    {
+        return $this->belongsTo(Volts::class);
+    }
+
+    public function weight()
+    {
+        return $this->belongsTo(Weight::class);
+    }
 }

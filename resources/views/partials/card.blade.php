@@ -11,7 +11,7 @@
             </p>
             <p class="card-text">{{ $product->name}}</p>
             <p class="card-text">$ {{ $product->price}}</p>
-            <a href="#" class="main-btn">More detail</a>
+            <a href="{{route('product', ['id' => $product->id])}}" class="main-btn">More detail</a>
         </div>
     </div>
 </div>

@@ -24,35 +24,35 @@
         <div class="col-lg-6 col-sm-12">
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
-              <img src="./img/1.jpg" alt="" class="img-fluid">
+              <img src="{{ asset($product->image1) }}" alt="" class="img-fluid">
             </div>
             <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
-              <img src="./img/2.jpg" alt="" class="img-fluid">
+              <img src="{{ asset($product->image2) }}" alt="" class="img-fluid">
             </div>
             <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
-              <img src="./img/3.jpg" alt="" class="img-fluid">
+              <img src="{{ asset($product->image3) }}" alt="" class="img-fluid">
             </div>
             <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
-              <img src="./img/4.jpg" alt="" class="img-fluid">
+              <img src="{{ asset($product->image4) }}" alt="" class="img-fluid">
             </div>
           </div>
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true"> <img src="./img/1.jpg" alt="" class="img-pill"></a>
+              <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true"> <img src="{{ asset($product->image1) }}" alt="" class="img-pill"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false"><img src="./img/2.jpg" alt="" class="img-pill"></a>
+              <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false"><img src="{{ asset($product->image2) }}" alt="" class="img-pill"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false"><img src="./img/3.jpg" alt="" class="img-pill"></a>
+              <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false"><img src="{{ asset($product->image3) }}" alt="" class="img-pill"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false"><img src="./img/4.jpg" alt="" class="img-pill"></a>
+              <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false"><img src="{{ asset($product->image4) }}" alt="" class="img-pill"></a>
             </li>
           </ul>
         </div>
         <div class="col-lg-6 col-sm-12">
-          <h1 class="product-title">Pro-Craft by Hilka 18V Li-Ion Cordless Drill with 2 Battery Packs</h1>
+          <h1 class="product-title">{{$product->name}}</h1>
           <h6 class="product-info">Product code 1987765</h6>
           <p class="product-rating">
             <span class="star"><i class="fas fa-star  yellow"></i></span>
@@ -65,11 +65,11 @@
             <a href="#review">Add your review</a>
             </span>
           </p>
-          <p class="product-price">₴ 335.80</p>
+          <p class="product-price">₴ {{$product->price}}</p>
           <p class="product-stock-info"> <i class="fas fa-check-circle fa-2x"></i>&nbsp;&nbsp; In stock</p>
           <hr>
           <form action="">
-            <input type="number" min="1" max="15" class="p-2 m-2" required>  <button class="main-btn">Add to cart</button> <button class="wishlist-btn">Add to wishlist  <i class="fas fa-heart"></i></button>
+            <input type="number" min="1" max="15" value="1" class="p-2 m-2" required>  <button class="main-btn">Add to cart</button> <button class="wishlist-btn">Add to wishlist  <i class="fas fa-heart"></i></button>
           </form>
         </div>
       </div>
@@ -129,50 +129,50 @@
               <tbody>
                 <tr>
                   <td>
-                    <h5 class="card-title">Width</h5>
-                  </td>
-                  <td>
-                    <h5 class="card-title">128mm</h5>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h5 class="card-title">Height</h5>
-                  </td>
-                  <td>
-                    <h5 class="card-title">508mm</h5>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h5 class="card-title">Depth</h5>
-                  </td>
-                  <td>
-                    <h5 class="card-title">85mm</h5>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
                     <h5 class="card-title">Weight</h5>
                   </td>
                   <td>
-                    <h5 class="card-title">52gm</h5>
+                    <h5 class="card-title">{{$product->weight->name}}</h5>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <h5 class="card-title">Quality checking</h5>
+                    <h5 class="card-title">Battery Type</h5>
                   </td>
                   <td>
-                    <h5 class="card-title">yes</h5>
+                    <h5 class="card-title">{{$product->battery_type->name}}</h5>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <h5 class="card-title">Freshness Duration</h5>
+                    <h5 class="card-title">Gear Box</h5>
                   </td>
                   <td>
-                    <h5 class="card-title">03days</h5>
+                    <h5 class="card-title">{{$product->gear_box->name}}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5 class="card-title">Volts</h5>
+                  </td>
+                  <td>
+                    <h5 class="card-title">{{$product->volt->name}}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5 class="card-title">Brand</h5>
+                  </td>
+                  <td>
+                    <h5 class="card-title">{{$product->brand->name}}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5 class="card-title">Category</h5>
+                  </td>
+                  <td>
+                    <h5 class="card-title">{{$product->category->name}}</h5>
                   </td>
                 </tr>
                 <tr>
@@ -181,14 +181,6 @@
                   </td>
                   <td>
                     <h5 class="card-title">Without touch of hand</h5>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h5 class="card-title">Each Box contains</h5>
-                  </td>
-                  <td>
-                    <h5 class="card-title">60pcs</h5>
                   </td>
                 </tr>
               </tbody>
@@ -484,17 +476,17 @@
       <div class="row">
         <div class="col-sm-12 col-lg-4">
           <div class="shop-guarantee__wrapper">
-            <p class="text-center shop-info"><img src="./img/time.svg" alt="" class="svg-icon"> <br><strong>Pay online now or pay <br>when you pick up in-store</strong></p>
+            <p class="text-center shop-info"><img src="{{url('/image/time.svg')}}" alt="" class="svg-icon"> <br><strong>Pay online now or pay <br>when you pick up in-store</strong></p>
           </div>
         </div>
         <div class="col-sm-12 col-lg-4">
           <div class="shop-guarantee__wrapper">
-            <p class="text-center shop-info"><img src="./img/car.svg" alt="" class="svg-icon"> <br><strong>Order by 6pm. Terms apply.</strong> </p>
+            <p class="text-center shop-info"><img src="{{url('/image/car.svg')}}" alt="" class="svg-icon"> <br><strong>Order by 6pm. Terms apply.</strong> </p>
           </div>
         </div>
         <div class="col-sm-12 col-lg-4">
           <div class="shop-guarantee__wrapper">
-            <p class="text-center shop-info"><img src="./img/pay.svg" alt="" class="svg-icon"> <br><strong>You can pay later <br>with the argos card</strong></p>
+            <p class="text-center shop-info"><img src="{{url('/image/pay.svg')}}" alt="" class="svg-icon"> <br><strong>You can pay later <br>with the argos card</strong></p>
           </div>
         </div>
       </div>

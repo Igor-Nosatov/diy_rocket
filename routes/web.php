@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/shop', 'ShopController@index')->name('shop');
 
 Route::get('/', 'HomeController@index')->name('home');
 
@@ -21,6 +22,10 @@ Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 
 Route::get('/shop', 'ShopController@index')->name('shop');
 
+Route::get('/product/{id}', 'ProductController@index')->name('product');
+
 Route::get('/{category}', 'ShopController@category')->name('category');
+
+
 
 
